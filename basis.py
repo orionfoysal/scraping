@@ -1,8 +1,9 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import numpy as np
+import time
 
-quote_page = 'http://www.basis.org.bd/index.php/members_area/member_detail/229'
+# quote_page = 'http://www.basis.org.bd/index.php/members_area/member_detail/229'
 
 # quote_page = 'http://www.bloomberg.com/quote/SPX:IND'
 
@@ -12,7 +13,7 @@ def myScrapper(quote_page):
 
     soup = BeautifulSoup(page, 'html.parser')
 
-    print(soup)
+    # print(soup)
 
     name_box = soup.find_all('font', attrs={'color':'666666'})
     tag_box = soup.find_all('font', attrs={'color' : '#000088'})
@@ -39,30 +40,39 @@ def myScrapper(quote_page):
     tag = np.array(tag)
     tag_found = tag[indices]
     tag = list(tag)
-    print(tag)
-    print(field)
-    print(list(field[indices]))
+    # print(tag)
+    # print(field)
+    # print(list(field[indices]))
 
     data = ""
     # print(tag_found)
     # print(max(indices))
     # print(indices)
     for i in range(len(tag_req)):
-        print(tag_req[i])
+        # print(tag_req[i])
         if tag_req[i] in tag_found:
             data += field[tag.index(tag_req[i])].replace(',','') + ','
         else:
             data += ','
 
-    data += field[-4] +','+ field[-3] +','+ field[-2] +','+ field[-1]
-    print(data)
+    # data += field[-4] +','+ field[-3] +','+ field[-2] +','+ field[-1]
+    # print(data)
 
     return data
 
 
 
-for i in range(12,13): #1418
+for i in range(11,1418): #1418
     quote_page = 'http://www.basis.org.bd/index.php/members_area/member_detail/' + str(i)
-    singleData = myScrapper(quote_page)
-    with open('test.csv','a') as f:
-        f.write(singleData+'\n')
+    try:
+        singleData = myScrapper(quote_page)
+        print('fetched ....'+ str(i))
+        print(singleData)
+        if len(singleData)>10:
+            print('writing .... '+ str(i))
+            with open('test.csv','a') as f:
+                f.write(singleData+'\n')
+    except:
+        pass
+
+    time.sleep(.5)
