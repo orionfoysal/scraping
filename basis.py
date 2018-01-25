@@ -2,10 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import numpy as np
 import time
-
-# quote_page = 'http://www.basis.org.bd/index.php/members_area/member_detail/229'
-
-# quote_page = 'http://www.bloomberg.com/quote/SPX:IND'
+import re
 
 
 def myScrapper(quote_page):
@@ -13,13 +10,40 @@ def myScrapper(quote_page):
 
     soup = BeautifulSoup(page, 'html.parser')
 
-    # print(soup)
+    all_text = soup.getText()
+    # all_text = re.sub(r'\n{2,}','\n',all_text)
+    # print(all_text)
+
+    list_all_text = all_text.splitlines()
+
+    info = ""
+    if 'Contact Person' in list_all_text:
+        contact_info = (all_text[all_text.index('Contact Person'):]).splitlines()
+        # print(contact_info)
+        if 'Name ' in contact_info:
+            info += contact_info[contact_info.index('Name ') + 1] + ','
+        
+        if 'Designation ' in contact_info:
+            info += contact_info[contact_info.index('Designation ') + 1] + ','
+
+        if 'Mobile ' in contact_info:
+            info += contact_info[contact_info.index('Mobile ') + 1] + ','
+
+        if 'E-mail ' in contact_info:
+            info += contact_info[contact_info.index('E-mail ') + 1] + ','
+
+        
+        # print(info)
+
+
 
     name_box = soup.find_all('font', attrs={'color':'666666'})
     tag_box = soup.find_all('font', attrs={'color' : '#000088'})
 
     name_box = soup.find_all('td', attrs={'align':'left'})
     tag_box = soup.find_all('td', attrs={'align' : 'right'})
+
+    # print(tag_box.text.strip())
 
     tag_req = ['Company Name','Address','E-mail','Company website','Organization’s head in Bangladesh', 'Designation','Mobile/Direct Phone','E-mail ID']
 
@@ -55,24 +79,24 @@ def myScrapper(quote_page):
         else:
             data += ','
 
-    # data += field[-4] +','+ field[-3] +','+ field[-2] +','+ field[-1]
+    data += info
     # print(data)
 
     return data
 
 
 
-for i in range(11,1418): #1418
+for i in range(9,1418): #1418
     quote_page = 'http://www.basis.org.bd/index.php/members_area/member_detail/' + str(i)
     try:
         singleData = myScrapper(quote_page)
         print('fetched ....'+ str(i))
-        print(singleData)
+        # print(singleData)
         if len(singleData)>10:
             print('writing .... '+ str(i))
-            with open('test.csv','a') as f:
+            with open('basis.csv','a') as f:
                 f.write(singleData+'\n')
     except:
-        pass
+        print('failed to get data')
 
-    time.sleep(.5)
+    time.sleep(.1)
