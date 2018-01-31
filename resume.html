@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta charset="utf-8" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Web icons fonts -->
+    <link rel="stylesheet" type="text/css" href="css/corporate-icon-font.css">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/corporate3_cv_details_ver2.css">
+    <link type="text/css" rel="stylesheet" href="css/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Jquery library-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap Jquery -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <![endif]-->
+
+
+    <link rel="stylesheet" type="text/css" href="/css/crp_css_common_ver04.css" />
+    <title>Resume View  | Bdjobs.com</title>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-69459483-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+<script>
+        (function(h,e,a,t,m,p) {
+        m=e.createElement(a);m.async=!0;m.src=t;
+        p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+        })(window,document,'script','https://u.heatmap.it/log.js');
+</script>
+
+</head>
+<body>
+
+
+
+    <!-- Start top bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 text-right">
+
+                    <a class="btn btn-default sub_window_new print-btn" path="/MessageToApplicant/Message_Sender.asp?JobID=&AppID=28056952035ID1400864&CVStatus=-1&PGType=CVView" height="75%" width="75%">
+                        <i class="icon-envelope"></i>
+                        Send Email
+                    </a>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="top-download pull-right">
+                        <ul>
+                            <li>
+                                <p>
+                                    <span class="icon-download"></span> Get this CV in:
+                                </p>
+                            </li>
+                            <li>
+                                <a href="javascript:goForPDF()">
+                                    <img src="images/pdf.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:goForDocNew()">
+                                    <img src="images/word.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:goForPrint()">
+                                    <img src="images/print.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-body cv-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="left-sidebar">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="user-control text-center">
+                                    <div class="actions">
+                                        <div class="btn-group" role="group" aria-label="">
+
+                                            <a type="button" class="btn btn-default invite-btn  sub_window_new" path="InviteToJobAds.asp?id=28056952035ID1400864" height="80%" width="75%">
+                                                <i class="icon-invite"></i>
+                                                <span>Invite</span>
+                                            </a>
+                                            <a type="button" class="btn btn-default shortlist-btn sub_window_new" path="cv_short_list.asp?appids=28056952035ID1400864&name=Syeda Sarina Hassan" height="80%" width="75%">
+                                                <i class="icon-check"></i>
+                                                <span>Shortlist</span>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="user-comments">
+                                    <input type="hidden" id="CVViewed" name="CVViewed" value="16141719" />
+
+                                    <div class="slide">
+
+
+                                        <h4>
+                                            <i class="icon-comments"></i>
+                                            Comments:
+                                        </h4>
+
+                                        <div id="comments">
+
+                                        </div>
+                                        <div id="more-comments" class="more-comments" style="display: none;">
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="single-comment">
+
+                                        <textarea id="textN" class="form-control" name="" cols="30" rows="3"></textarea>
+
+                                        <strong class="small" id="rtN" style="display: none">Rate this CV</strong>
+                                        <div id="stars-existingN" class="starrr" data-rating='1'></div>
+                                        <input type="hidden" name="count-existing" class="count-existing" id="count-existingN" value="">
+
+                                        <p id="pN">
+                                            You can add comments by clicking Add Comment button.
+                                        </p>
+
+                                        <div class="rating" id="ratingN">
+                                        </div>
+
+
+                                        <button class="btn btn-default edit-btn" id="editN" sl="N" style="display: none">
+                                            <i class="icon-edit"></i>Edit
+                                        </button>
+
+
+                                        <button class="btn btn-default apply-btn" id="applyN" sl="N">
+                                            <i class="icon-check"></i>Apply
+                                        </button>
+
+                                        <button class="btn btn-default cancel-btn" id="cancelN" sl="N">
+                                            <i class="icon-times"></i>Cancel
+                                        </button>
+                                        <script type="text/javascript">
+                                            $(document).ready(function () {
+
+
+                                                $('#stars-existingN').on('starrr:change', function (e, value) {
+                                                    $('#count-existingN').val(value);
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <a id="add-commentN" class="btn btn-default add-comment" sl="N">Add Comment
+                                    </a>
+
+                                </div>
+
+
+                                <div class="attachment text-center">
+                                    <img src="images/file.png" alt="">
+                                    <p>
+                                        You can download his/her
+                                        <br>
+                                        <strong>Attached CV</strong>
+                                    </p>
+                                    <button class="btn btn-default" onclick="AtteachedCVDownload(16141719,'Syeda Sarina Hassan','.pdf')">
+                                        <i class="icon-download"></i> Download
+                                    </button>
+                                </div>
+
+                                <div class="reports">
+
+                                                <div class="panel panel-default">
+                                                  <div class="panel-heading">
+                                                    <div class="panel-title">Certification Test</div>
+                                                  </div>
+                                                  <div class="panel-body">
+                                                    <h4>Finance and Banking Services</h4>
+
+
+
+
+                                                                                                <a href="https://www.myamcat.com/downloadReport?reportID=nDd7B021c4YFY3r%2BLSP2EBrhSXjIxr%2BPIxP%2BmgOhBu4%3D" target="_blank" class="btn assessment-report view-resume-b2c-report" data-assement="65770" data-toggle="tooltip" data-placement="top" data-original-title="View report">
+                                                     <i class="icon-pdf-file"></i>
+                                                     Report
+                                                </a>
+
+
+
+                                              </div>
+                                            </div>
+
+
+
+                                </div>
+
+
+                                                                        <div class="promo-banner">
+                                                                                <a target="_blank" href="/AssessmentCertificate.asp?req=employabilityassessmenttest" onClick="ga('send', 'event', 'CV Details - View Assessment Promotion', 'OnnoRokom Electronics Company Ltd.',  '1/28/2018 1:37:18 PM', 1)"><img src="/images/assessment-promo-ver01.jpg" alt="Bdjobs-AMCAT Assessment test" class="img-responsive"></a>
+                                                                        </div>
+                                                                        <style type="text/css">
+                                                                                .promo-banner img{
+                                                                                        display: inline-block;
+                                                                                }
+                                                                                .promo-banner{
+                                                                                        text-align: center;
+                                                                                        margin: 20px 0px 20px 0px;
+                                                                                }
+                                                                        </style>
+
+
+                                                                <div class="cv-details-banner">
+                                                                        <a href="/AssessmentCertificate.asp?req=EmployabilityCertificationTest" target="_blank" onClick="ga('send', 'event', 'Assessment B2C Promotion', 'Corporate Cv Details Banner',  'OnnoRokom Electronics Company Ltd.', 1)">
+                                                                                <img class="img-responsive img-inline-block" src="/images/cv-details-banner-1.png" alt="banner">
+                                                                        </a>
+                                                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+
+
+                    <form action="contact.asp" method="post" name="form2" id="form2">
+
+                        <input type="hidden" name="hide_user" value="28056952035ID1400864">
+                        <input type="hidden" name="NAME" value="Syeda Sarina Hassan">
+                        <input type="hidden" name="JOB_TITLE" value="">
+                        <input type="hidden" name="JOB_ID" id="JOB_ID" value="">
+                        <input type="hidden" name="COMID" value="36439">
+                        <input type="hidden" name="E_MAIL" value="sunshine02ster@gmail.com">
+                        <input type="hidden" name="ADD1" value="">
+                        <input type="hidden" name="ADD2" value="">
+
+                        <input type="hidden" name="rankForJS_" id="rankForJS_" value="">
+                        <input type="hidden" name="MainCV_" id="MainCV_" value="">
+                        <input type="hidden" name="imgSrc_" id="imgSrc_" value="">
+                        <input type="hidden" id="wv" name="wv" value="2k+">
+                        <input type="hidden" id="v" name="v" value="">
+                        <input type="hidden" id="hidRank" name="hidRank" value="">
+                        <input type="hidden" id="hidRankOn" name="hidRankOn" value="">
+                        <input type="hidden" id="hidComment" name="hidComment" value="">
+                        <input type="hidden" name="idn" id="idn" value="28056952035ID1400864">
+                        <input type="hidden" name="ComID" id="ComID" value="36439">
+                        <input type="hidden" name="ViewRw" id="ViewRw" value="">
+                        <input type="hidden" name="ViewReqFrm" id="ViewReqFrm" value="">
+                        <INPUT type="hidden" name="hidAppViewInfo" id="hidAppViewInfo" value="16141719">
+                    </form>
+                     <input type="hidden" id="MainCV" value="
+
+         <div id='rankForJS' style='margin: 10px 20px 10px 0px;'>
+          <table align='right' style='padding:0 0 0 0;' border='0' cellspacing='0' cellpadding='0'>
+           <tbody><tr>
+             <td colspan='2'> <em style='font-size:70%'>Source: Bdjobs.com Online CV Bank</em></td>
+
+             </tr>
+         </tbody></table> <br>
+      </div>
+
+      <table id='tblCertified' width='600' cellspacing='0' cellpadding='0' border='0' align='center'>
+         <tbody>
+                         <tr>
+                <td class='BDJGrayArial11px'>
+                        <a href='/AssessmentCertificate.asp?req=EmployabilityCertificationTest' target='_blank'><img src='https://mybdjobs.bdjobs.com/mybdjobs/images/bdjobs_amcate_certified.jpg' alt=''></a>
+
+                </td>
+             </tr>
+             <tr>
+                <td height='10'></td>
+             </tr>
+             <tr>
+                <td class='BDJGrayArial11px'>
+
+                        <span style='background-color: #e0e0e0; color: #333333; border-radius: 2px;padding: 4px 8px;font-size: 12px; font-weight: normal;display: inline-block;height: 27px;margin-bottom: 10px;'>Finance and Banking Services</span>
+
+                </td>
+             </tr>
+             <tr>
+                                <td style='border-bottom:1px solid #000000;'></td>
+                        </tr>
+         </tbody>
+        </table>
+
+
+      <table width='600'  border='0' cellspacing='0' cellpadding='2' align='left' class='lu'>
+             <tbody>
+
+             <tr>
+                <td height='2' class='BDJGrayArial11px'>
+                        Last Updated : <strong><i>January 14, 2018</i></strong>
+                </td>
+             </tr>
+         </tbody>
+        </table>
+
+     <table border='0' cellpadding='0' cellspacing='0' align='center' width='600'>
+                <tr>
+                <td colspan='6'>
+                <table border='0' align='center' cellpadding='0' cellspacing='0' width='100%'>
+                        <tr>
+                        <td width='73%' height='93' align='left' valign='bottom' class='BDJApplicantsName'>
+                        SYEDA SARINA HASSAN
+
+            </td>
+
+                        <td width='27%' rowspan='2' align='right' valign='bottom'>
+
+                                <table width='140' height='140' border='0' align='center' cellpadding='0' cellspacing='7'  >
+                                        <tr>
+                                        <td  width='124' height='135' align='center'   valign='middle'><img style='border: 1px solid #dddddd ;' src='http://my.bdjobs.com/photos/2750001-2775000/1112773494f3b4d.jpg'  width='124' height='135'></td>
+                                        </tr>
+                                </table>
+
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td class='BDJNormalText04' align='left' valign='middle'>
+
+                                 Address: 9/11, Salimullah road, Block-D, Mohammadpur, Dhaka-1207, Ward no. 31.
+                                 <br />
+                                 Home Phone: +8801684289110
+                                 <br />
+                                 Mobile : +8801531776730
+                                 <br />
+                                 email:sunshine02ster@gmail.com
+                        </td>
+                        </tr>
+                </table>
+                </td>
+                </tr>
+        </table>
+
+     <table border='0' cellpadding='0' cellspacing='0' align='center' width='600'>
+                 <tr>
+                 <td colspan='6' style='border-bottom:1px solid #dddddd;'> </td>
+                 </tr>
+
+                 <tr><td colspan='6'> </td></tr>
+
+                 <tr>
+                 <td colspan='6' class='BDJHeadline01'><U>Career Objective:</U></td>
+                 </tr>
+
+                 <tr>
+                 <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                 I am pursuing a career where I can apply and improve my academic experience and knowledge, enabling me to combine those competencies with my integrity, sincerity and commitment, to contribute to the welfare of the industry and society.
+                 </td>
+                 </tr>
+        </table>
+
+         <table border='0' cellpadding='0' style='margin-top:3px;' cellspacing='0' align='center' width='600'>
+                 <tr>
+                 <td colspan='6' class='BDJHeadline01'><U>Career Summary:</U></td>
+                 </tr>
+
+                 <tr>
+                 <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                 • Graduated with a finance background from the <span class='highLightClass'>University of Dhaka</span>.<br>• Interned at Social Islami Bank Limited for three months in 2016.<br>• Worked as a voluntary librarian at Goodreads, an online platform for book authors and reviewers, from July 2012 to March 2017.
+                 </td>
+                 </tr>
+         </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' style='margin-top:3px;' align='center' width='600'>
+                 <tr>
+                 <td colspan='6' class='BDJHeadline01'><U>Special Qualification:</U></td>
+                 </tr>
+
+                 <tr>
+                 <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                 • Delivering quality reports, critical analyses and research papers under intense work pressure.<br>• Reviewing fiction and non-fiction books and articles.<br>• Updating book metadata and improving the database of Goodreads.
+                 </td>
+                 </tr>
+         </table>
+
+         <table border='0' cellpadding='0' style='margin-top:3px;' cellspacing='0' align='center' width='600'>
+                 <tr>
+                 <td colspan='6' class='BDJHeadline01'><U>Academic Qualification:</U></td>
+                 </tr>
+
+                 <tr>
+                 <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                 <table border='0' cellpadding='0' cellspacing='0' align='center' width='100%' style='border-top:1px solid #dddddd;border-left:1px solid #dddddd;border-bottom:1px solid #dddddd;  font-size:11px; font-weight:normal;'>
+                          <tr >
+                          <td width='20%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Exam Title</STRONG></td>
+                          <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Concentration/Major</STRONG></td>
+                          <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Institute</STRONG></td>
+                          <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Result</STRONG></td>
+
+                               <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Pas.Year</STRONG></td>
+
+                               <td width='10%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Duration</STRONG></td>
+                                   <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Achievement</STRONG></td>
+
+                          </tr>
+
+                                <tr>
+
+                                    <td width='20%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Masters of Business Administration (MBA)
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Finance
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        <span class='highLightClass'>University of Dhaka</span>
+
+                                        </td>
+
+                                        <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        CGPA:3.36<br/>out of 4
+
+                                        </td>
+
+                                                 <td width='12.5%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                             2016
+
+                                             </td>
+
+                                                 <td width='10%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                 1
+
+                                                </td>
+
+                                                <td '15%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                Quality research, problem-solving skills, and positive attitude under stress.
+
+                                                </td>
+                                                </tr>
+
+                                <tr>
+
+                                    <td width='20%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Bachelor of Business Administration (BBA)
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Finance
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        <span class='highLightClass'>University of Dhaka</span>
+
+                                        </td>
+
+                                        <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        CGPA:3.45<br/>out of 4
+
+                                        </td>
+
+                                                 <td width='12.5%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                             2015
+
+                                             </td>
+
+                                                 <td width='10%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                 4
+
+                                                </td>
+
+                                                <td '15%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                Critical thinking ability, practical applications of statistical software, and presentation skills.
+
+                                                </td>
+                                                </tr>
+
+                                <tr>
+
+                                    <td width='20%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Junior Level Proficiency Exam (Non-degree Course)
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Japanese language
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Institute of Modern Language (under <span class='highLightClass'>University of Dhaka</span>)
+
+                                        </td>
+
+                                        <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Second Division
+
+                                        </td>
+
+                                                 <td width='12.5%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                             2014
+
+                                             </td>
+
+                                                 <td width='10%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                 1
+
+                                                </td>
+
+                                                <td '15%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                Basic conversational and written Japanese, study a foreign language by self and in groups.
+
+                                                </td>
+                                                </tr>
+
+                                <tr>
+
+                                    <td width='20%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        HSC
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Business Studies
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Dhaka City College
+
+                                        </td>
+
+                                        <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        CGPA:5<br/>out of 5
+
+                                        </td>
+
+                                                 <td width='12.5%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                             2011
+
+                                             </td>
+
+                                                 <td width='10%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                 2
+
+                                                </td>
+
+                                                <td '15%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                Learned basic statistics and intermediate accounting.
+
+                                                </td>
+                                                </tr>
+
+                                <tr>
+
+                                    <td width='20%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        SSC
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Business Studies
+
+                                        </td>
+
+                                        <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        Mohammadpur Preparatory & Higher Secondary Girls` School
+
+                                        </td>
+
+                                        <td width='12.5%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        CGPA:5<br/>out of 5
+
+                                        </td>
+
+                                                 <td width='12.5%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                             2009
+
+                                             </td>
+
+                                                 <td width='10%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                 2
+
+                                                </td>
+
+                                                <td '15%' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' align='center'>
+                                                Knowledge, character, sincerity and responsibility growth for life in and outside school.
+
+                                                </td>
+                                                </tr>
+
+                 </table>
+                 </td>
+                 </tr>
+         </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+         <tr>
+         <td colspan='6' class='BDJHeadline01'><U>Training Summary:</U></td>
+         </tr>
+
+         <tr>
+         <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='100%' style='border-top:1px solid #dddddd;border-left:1px solid #dddddd;border-bottom:1px solid #dddddd;  font-size:11px; font-weight:normal; '>
+                 <tr>
+                 <td width='19%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Training Title</STRONG></td>
+                 <td width='19%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Topic</STRONG></td>
+                 <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Institute</STRONG></td>
+                 <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Country</STRONG></td>
+                 <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Location</STRONG></td>
+                 <td width='8%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Year</STRONG></td>
+                 <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Duration</STRONG></td>
+                 </tr>
+
+                           <tr>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           Internship
+
+                           </td>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           General banking, customer relations, clearance, overseas investments, and retail and home finance systems.
+
+                           </td>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           Social Islami Bank Limited (SIBL)
+
+                           </td>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           Bangladesh
+
+                           </td>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           Basundhara City, Panthapath Branch, Dhaka.
+
+                           </td>
+                           <td width='10%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           2014
+
+                           </td>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                           3 months
+
+                           </td>
+                           </tr>
+
+         </table>
+         </td>
+         </tr>
+         </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+         <tr>
+         <td colspan='6' class='BDJHeadline01'><U>bdjobs-amcat Employability Certificates:</U></td>
+         </tr>
+
+         <tr>
+         <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='100%' style='border-top:1px solid #dddddd;border-left:1px solid #dddddd;border-bottom:1px solid #dddddd;  font-size:11px; font-weight:normal; '>
+                 <tr>
+                 <td width='75%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Job Role</STRONG></td>
+                 <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Test Date</STRONG></td>
+                 </tr>
+
+                           <tr>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                        <b>Finance and Banking Services</b><br>( English, Financial and Banking Services, Logical Ability, Personality, Quantitative Ability)
+                           </td>
+                           <td width='15%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>
+                                         December 29, 2017
+
+                           </td>
+
+                           </tr>
+
+         </table>
+         </td>
+         </tr>
+         </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+
+                <tr>
+                <td colspan='6' class='BDJHeadline01'><U>Career and Application Information:</U></td>
+                </tr>
+
+                <tr>
+                <td colspan='6' align='left' class='BDJNormalText01'>
+                <table border='0' cellpadding='0' cellspacing='0' class='BDJNormalText01'  align='center' width='100%'>
+
+                                 <tr class='BDJNormalText03'>
+                                 <td width='32%' align='left' style='padding-left:5px;'>Looking For</td>
+                                 <td width='2%' align='center'>:</td>
+                                 <td width='66%' align='left'>
+                                 Entry Level Job
+                                 </td>
+                                 </tr>
+
+                                 <tr class='BDJNormalText03'>
+                                 <td width='32%' align='left' style='padding-left:5px;'>Available  For</td>
+                                 <td width='2%' align='center'>:</td>
+                                 <td width='66%' align='left'>
+                                 Full Time
+                                 </td>
+                                 </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td width='32%' align='left' style='padding-left:5px;'>Preferred  Job Category</td>
+                        <td width='2%' align='center'>:</td>
+                        <td width='66%' align='left'>
+                        Accounting/Finance, Research/Consultancy
+                        </td>
+                        </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td width='32%' align='left' style='padding-left:5px;'>Preferred  District </td>
+                        <td width='2%' align='center'>:</td>
+                        <td width='66%' align='left'>
+                        Dhaka
+                        </td>
+                        </tr>
+
+                                         <tr class='BDJNormalText03'>
+                                         <td width='32%' align='left' style='padding-left:5px;'>Preferred  Country </td>
+                                         <td width='2%' align='center'>:</td>
+                                         <td width='66%' align='left'>
+                                         Japan, United States, Finland
+                                         </td>
+                                         </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td width='32%' align='left' style='padding-left:5px;' valign='top'>Preferred  Organization Types</td>
+                        <td width='2%' align='center' valign='top'>:</td>
+                        <td width='66%' align='left'>
+
+                        </td>
+                        </tr>
+                </table>
+                </td>
+                </tr>
+        </table>
+
+     <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+                <tr>
+                <td colspan='6' class='BDJHeadline01'><U>Specialization:</U></td>
+                </tr>
+
+                         <tr>
+                         <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                         <table border='0' cellpadding='0' cellspacing='0' align='center' width='100%' style='border-top:1px solid #dddddd;border-left:1px solid #dddddd;border-bottom:1px solid #dddddd;  font-size:11px; font-weight:normal;'>
+                                <tr>
+
+                                         <td width='40%' align='center'  style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' >
+                                         <STRONG>Fields of Specialization</STRONG>
+                                         </td>
+
+                                <tr>
+
+                                     <td width='40%' align='left' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;' >
+                                                  <ul><li> MS Word/ Excel/ PowerPoint/ OneNote</li><li> Analytical review</li><li> Critical Reasoning</li><li> Latex</li><li> SPSS</li><li> STATA</li></ul><br>
+
+                                                  </td>
+
+                                </tr>
+                         </table>
+                         </td>
+                         </tr>
+
+                </table>
+
+              <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+
+                          <tr>
+                          <td colspan='6' class='BDJHeadline01'><U>Extra Curricular Activities:</U></td>
+                          </tr>
+
+                          <tr>
+                          <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                          • Compose original songs and cover old and new melodious songs in different languages.
+• Hold ranks #17 to #21 top reviewer on Goodreads.
+• Develop strategic skills through playing action games, board games, and Sudoku puzzles.
+• Was runner-up in the chess match at college indoor sports.
+                          </td>
+                          </tr>
+                  </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+                 <tr>
+                 <td colspan='6' class='BDJHeadline01'><U>Language Proficiency:</U></td>
+                 </tr>
+
+                 <tr>
+                 <td colspan='6' align='left' style='padding-left:5px;' class='BDJNormalText01'>
+                 <table border='0' cellpadding='0' cellspacing='0' align='center' width='100%' style='border-top:1px solid #dddddd;border-left:1px solid #dddddd;border-bottom:1px solid #dddddd;  font-size:11px; font-weight:normal;'>
+                         <tr>
+                         <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Language</STRONG></td>
+                         <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Reading</STRONG></td>
+                         <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Writing</STRONG></td>
+                         <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'><STRONG>Speaking</STRONG></td>
+                         </tr>
+
+                                   <tr>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Bangla </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>High </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Medium </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>High </td>
+                                   </tr>
+
+                                   <tr>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>English </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>High </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>High </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Medium </td>
+                                   </tr>
+
+                                   <tr>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Hindi </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Low </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Low </td>
+                                   <td width='25%' align='center' style='border-right:1px solid #dddddd;border-top:1px solid #dddddd;padding:3px;'>Medium </td>
+                                   </tr>
+
+                 </table>
+                 </td>
+                 </tr>
+         </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;' >
+
+                 <tr>
+                 <td colspan='6' class='BDJHeadline01'><U>Personal Details :</U></td>
+                 </tr>
+
+                <tr>
+                <td colspan='6' align='left' class='BDJNormalText01'>
+                <table border='0' cellpadding='0' cellspacing='0' align='center' width='100%' class='BDJNormalText01'>
+
+                                 <tr class='BDJNormalText03'>
+                                 <td width='22%' align='left' style='padding-left:5px;'>Father's Name </td>
+                                 <td width='2%' align='center'>:</td>
+                                 <td width='76%' align='left'>
+                                 Syed Abu Md. Hassan
+                                 </td>
+                                 </tr>
+
+                                <tr class='BDJNormalText03'>
+                                <td width='22%' align='left' style='padding-left:5px;'>Mother's Name </td>
+                                 <td width='2%' align='center'>:</td>
+                                 <td width='76%' align='left'>
+                                 Afroza Begum
+                                 </td>
+                                 </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td width='22%' align='left' style='padding-left:5px;'>Date  of Birth</td>
+                        <td width='2%' align='center'>:</td>
+                        <td width='76%' align='left'>
+                         December 30, 1993
+                        </td>
+                        </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td width='22%' align='left' style='padding-left:5px;'>Gender</td>
+                        <td width='2%' align='center'>:</td>
+                        <td width='76%' align='left'>
+                        Female
+                        </td>
+                        </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td width='22%' align='left' style='padding-left:5px;'>Marital  Status </td>
+                        <td width='2%' align='center'>:</td>
+                        <td width='76%' align='left'>
+                        Unmarried
+                        </td>
+                        </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td align='left' style='padding-left:5px;'>Nationality</td>
+                        <td align='center'>:</td>
+                        <td align='left'>
+                        Bangladeshi
+                        </td>
+                        </tr>
+
+                                 <tr class='BDJNormalText03'>
+                                 <td align='left' style='padding-left:5px;'>Religion</td>
+                                 <td align='center'>:</td>
+                                 <td align='left'>
+                                 Islam
+                                 </td>
+                                 </tr>
+
+                        <tr class='BDJNormalText03'>
+                        <td align='left' style='padding-left:5px;'>Current  Location</td>
+                        <td align='center'>:</td>
+                        <td align='left'>
+                        Dhaka
+                        </td>
+                        </tr>
+                </table>
+                </td>
+                </tr>
+        </table>
+
+         <table border='0' cellpadding='0' cellspacing='0' align='center' width='600' style='margin-top:3px;'>
+
+
+                <tr>
+                <td colspan='6' align='left' class='BDJNormalText01'>
+                <table border='0' width='100%' align='center' cellpadding='0' cellspacing='0' class='BDJNormalText01'>
+                                <tr class='BDJNormalText03'>
+                                <td colspan='4' class='BDJHeadline01' align='left' > <U>Reference (s):</U></td>
+
+                                </tr>
+
+                                <tr class='BDJNormalText03'>
+                                <td width='22%' align='left'> </td>
+                                <td width='2%' align='center'> </td>
+                                <td width='35%' align='left' class='BDJBoldText01' style='border-right:1px solid #666666;'><U>Reference: 01</U></td>
+                                <td width='41%' align='left' class='BDJBoldText01' style='padding-left:15px;'><U>Reference: 02</U></td>
+                                </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td width='22%' align='left' style='padding-left:5px;'>Name </td>
+                                  <td width='2%' align='center'>:</td>
+                                  <td width='35%' align='left'  style='border-right:1px solid #666666;' >
+                                  Syed Alimuzzaman
+
+                                  </td>
+                                  <td width='41%' align='left'>
+                                  Abdullah Al Mamun Tusher
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td width='22%' align='left' style='padding-left:5px;'>Organization</td>
+                                  <td width='2%' align='center'>:</td>
+                                  <td width='35%' align='left'  style='border-right:1px solid #666666;' >
+                                  Paragaon Group, James Finlay Tea Estates
+
+                                  </td>
+                                  <td width='41%' align='left'>
+                                  BCDL (Bashundhara Group)
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td width='22%' align='left' style='padding-left:5px;'>Designation</td>
+                                  <td width='2%' align='center'>:</td>
+                                  <td width='35%' align='left'  style='border-right:1px solid #666666;'  >
+                                  Advisor, Former COO
+
+                                  </td>
+                                  <td width='41%' align='left'>
+                                  Officer (HR, Administration & Logistics)
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td width='22%' align='left' style='padding-left:5px;'>Address</td>
+                                  <td width='2%' align='center'>:</td>
+                                  <td width='35%' align='left'  style='border-right:1px solid #666666;' >
+
+
+                                  </td>
+                                  <td width='41%' align='left'>
+
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td width='22%' align='left' style='padding-left:5px;'>Phone (Off.) </td>
+                                  <td width='2%' align='center'>:</td>
+                                  <td width='35%' align='left'  style='border-right:1px solid #666666;' >
+
+
+                                  </td>
+                                  <td width='41%' align='left'>
+
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td align='left' style='padding-left:5px;'>Phone (Res.) </td>
+                                  <td align='center'>:</td>
+                                  <td align='left'  style='border-right:1px solid #666666;' >
+
+
+                                  </td>
+                                  <td align='left'>
+
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td align='left' style='padding-left:5px;'>Mobile</td>
+                                  <td align='center'>:</td>
+                                  <td align='left'  style='border-right:1px solid #666666;'  >
+                                  +88 01711733957
+
+                                  </td>
+                                  <td align='left'>
+                                  +88 01799998345
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td align='left' style='padding-left:5px;'>EMail</td>
+                                  <td align='center'>:</td>
+                                  <td align='left'  style='border-right:1px solid #666666;'  >
+                                  syedzaman1954@gmail.com
+
+                                  </td>
+                                  <td align='left'>
+                                  tusher.abdullah@yahoo.com
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td align='left' style='padding-left:5px;'>Relation</td>
+                                  <td align='center'>:</td>
+                                  <td align='left'  style='border-right:1px solid #666666;' >
+                                  Relative
+
+                                  </td>
+                                  <td align='left'>
+                                  Relative
+                                  </td>
+                                  </tr>
+
+                                  <tr class='BDJNormalText03'>
+                                  <td align='left'> </td>
+                                  <td align='center'> </td>
+                                  <td colspan='2' align='left'>
+                                  </td>
+                                  </tr>
+
+                </table>
+                </td>
+                </tr>
+        </table>
+
+<CENTER>
+<DIV id='divCopyRight' class='BDJCopyRight' style='border-top:1px solid #999999; width:600px;'>
+
+</DIV>
+</CENTER>
+"  >
+
+<div id="hid_MainCV" ></div>
+
+<input type='hidden' id='imgSrc' value='http://my.bdjobs.com/photos/2750001-2775000/1112773494f3b4d.jpg'  />
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        document.getElementById("hid_MainCV").innerHTML = document.getElementById("MainCV").value;
+
+        function goForPrint() {
+            document.getElementById("rankForJS_").value = document.getElementById("hid_MainCV").innerHTML;
+            document.getElementById("MainCV_").value = document.getElementById("MainCV").value;//.innerHTML ;
+            document.getElementById("imgSrc_").value = document.getElementById("imgSrc").value;
+            document.getElementById("form2").target = "_blank"
+            document.getElementById("form2").action = "CVPrintView.asp";
+            document.getElementById("form2").submit();
+        }
+        function goForDocNew() {
+            document.getElementById("rankForJS_").value = document.getElementById("hid_MainCV").innerHTML;
+            document.getElementById("MainCV_").value = document.getElementById("MainCV").value;//.innerHTML ;
+            document.getElementById("imgSrc_").value = document.getElementById("imgSrc").value;
+            document.getElementById("form2").action = "CV_for_Word.asp";
+            document.getElementById("form2").submit();
+        }
+        function goForDoc() {
+            document.getElementById("rankForJS_").value = document.getElementById("rankForJS").innerHTML;
+            document.getElementById("MainCV_").value = document.getElementById("MainCV").value;//.innerHTML ;
+            document.getElementById("imgSrc_").value = document.getElementById("imgSrc").value;
+            document.getElementById("form2").action = "http://corporate3.bdjobs.com/docBuilder/CV_WORD_photoNew.php";
+            document.getElementById("form2").submit();
+        }
+
+        function goForPDF() {
+            document.getElementById("rankForJS_").value = document.getElementById("rankForJS").innerHTML;
+            document.getElementById("MainCV_").value = document.getElementById("MainCV").value;//.innerHTML;
+            document.getElementById("imgSrc_").value = document.getElementById("imgSrc").value;
+            document.getElementById("form2").action = "https://corporate.bdjobs.com/PDFBulider/View_resume_pdf.php";
+            document.getElementById("form2").submit();
+                        idn = $("#idn").val();
+                        jid= $("#JOB_ID").val();
+                        $.ajax({
+                                url:"ViewresumeDownloadpdf.asp?idn="+idn+"&jid="+jid,
+                                Method: "POST",
+                                success: function(){
+                                        //do Nothing
+                                        }
+                                });
+        }
+
+        function AtteachedCVDownload(id, name, cvFormat) {
+            document.getElementById("hidAppViewInfo1").value = id;
+            document.getElementById("hidAppName").value = name;
+            document.getElementById("hidAppCVFormate").value = cvFormat;
+            document.getElementById("frmAttachedCV").action = "AttachedCVDownload.asp";
+            document.getElementById("frmAttachedCV").target = "_blank";
+            document.getElementById("frmAttachedCV").submit();
+        }
+
+    </script>
+    <form id="frmAttachedCV" name="frmAttachedCV" method="post">
+        <input type="hidden" name="hidAppName" id="hidAppName">
+        <input type="hidden" name="hidAppCVFormate" id="hidAppCVFormate">
+        <input type="hidden" name="hidAppViewInfo" id="hidAppViewInfo1">
+        <input type="hidden" name="hidApplIdn" id="hidApplIdn" value="_9]3[7\4^4Z7]23">
+    </form>
+
+
+
+
+
+
+
+    <!-- End top bar -->
+
+    <!-- Common Jquery -->
+    <script type="text/javascript" src="js/corporate3_cv_details_ver03.js"></script>
+    <script type="text/javascript" src="js/rating.js"></script>
+
+</body>
+</html>
