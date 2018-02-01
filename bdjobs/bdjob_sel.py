@@ -1,3 +1,4 @@
+from selenium.webdriver.support.ui import Select
 from selenium import webdriver
 from parsel import Selector
 from time import sleep
@@ -21,9 +22,9 @@ sleep(5)
 
 # sel = Selector(text=driver.page_source)
 
-# download_pdf = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[2]/div/ul/li[2]/a')
+# download_pdf = (driver.find_element_by_xpath('/html/body/div[1]/div/div/div[2]/div/ul/li[2]/a')).click()
 
-# download_pdf.click()
+# download_word = (driver.find_element_by_xpath('/html/body/div[1]/div/div/div[2]/div/ul/li[3]/a')).click()
 
 # applicantsName = sel.xpath('//*[@class="BDJApplicantsName"]//text()').extract()
 # # applicantsAddress = sel.xpath('//*[@id="hid_MainCV"]/table[3]/tbody/tr/td/table/tbody/tr[2]/td/text()').extract()
@@ -48,3 +49,39 @@ sleep(5)
 # keyword.send_keys('University of Dhaka')
 # search_button = driver.find_element_by_xpath('//*[@id="KeywordFrom"]/div/div/span/a')
 # search_button.click()
+
+# Click and Go To On CV Bank Directory
+driver.find_element_by_link_text('CV Bank').click()
+sleep(5)
+# Click on Show record button to open navigation bar with filter
+driver.find_element_by_link_text('Show record').click()
+sleep(5)
+# Open navigation box to filter with academic Institution
+driver.find_element_by_link_text('Academic').click()
+sleep(2)
+# Select a University / Institution
+univ = 'IBA, Dhaka University'
+select_univ = Select(driver.find_element_by_id('lstInstitute_edu'))
+select_univ.select_by_visible_text(univ)
+
+# Click on record button to show filtered data 
+driver.find_element_by_link_text('Show record').click()
+sleep(5)
+
+
+while True:
+    # Get all the CV links on the Page
+    links = driver.find_elements_by_xpath('//h2//a')
+
+    for link in links:
+        href = link.get_attribute("href")
+
+        with open("oka.csv", 'a') as f:
+            f.write(href + '\n')
+    
+    (driver.find_element_by_xpath('//*[@id="BottomPagging"]//a[@aria-label="Next"]')).click()
+    sleep(5)
+
+
+
+
